@@ -5,7 +5,7 @@ from torch.nn import Parameter
 from ._functional import SwishFunction
 
 
-def swish(data: Tensor, beta: Union[float, Parameter]) -> Tensor:
+def swish(data: Tensor, beta: Union[float, Tensor]) -> Tensor:
     z = data * (beta * data).sigmoid()
     return z
 

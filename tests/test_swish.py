@@ -96,3 +96,8 @@ class TestSwish(unittest.TestCase):
         input = (torch.tensor([-1.0, 0.0, 1.0], dtype=torch.double, requires_grad=True),
                  torch.tensor(1.0, dtype=torch.double, requires_grad=True))
         gradcheck(swish, inputs=input)
+
+    def test_swish_extra_repr(self):
+
+        swish = Swish()
+        print(swish)

@@ -1,11 +1,19 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r") as f:
+    long_description = f.read()
+
 setup(
     name="torch_xtend",
     version="0.1",
-    find_packages=find_packages(),
-    description="PyTorch Extensions",
     author="leengsmile",
+    author_email="leengsmile@126.com",
+    description="PyTorch Extensions",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    find_packages=find_packages(exclude=["tests"]),
     url="https://github.com/leengsmile/pytorch-xtend",
-    license="MIT"
+    python_requires=">=3.6",
+    license="MIT",
+    keywords=["PyTorch", "deep learning"]
 )
